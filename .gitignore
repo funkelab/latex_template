@@ -1,0 +1,7 @@
+*.pdf
+.latexmk
+*.sw[pmno]
+*.dpth
+*.log
+.DS_Store
+arxiv_export

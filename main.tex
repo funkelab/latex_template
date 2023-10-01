@@ -1,0 +1,37 @@
+\documentclass[twocolumn]{article}
+
+\input{preamble}
+\input{definitions}
+
+\begin{document}
+
+\title{Funkelab \LaTeX Template}
+
+\author{
+  BoJack Horseman$^{1}$,
+  Princess Caroline$^{2}$,
+  Mr. Peanut Butter$^{1}$\thanks{Corresponding Author, woof@hollywoo.org}
+  \\\\
+  \normalsize{$^1$ Hollywoo Studios},
+  \normalsize{$^2$ VIM}\\
+}
+
+\maketitle
+
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/method}
+\input{sections/results}
+\input{sections/discussion}
+
+{
+  \small
+  \bibliographystyle{plain}
+  \bibliography{references}
+}
+
+\clearpage
+\begin{appendices}
+\input{sections/appendix}
+\end{appendices}
+\end{document}

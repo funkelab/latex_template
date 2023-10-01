@@ -1,0 +1,13 @@
+\tikzsetnextfilename{results}%
+\begin{tikzpicture}
+  \begin{axis}[
+    xlabel=$x$,
+    ylabel=$f(x)$
+  ]
+    \addplot [
+        domain=-10:10,
+        samples=100,
+        color=orange,
+    ] {sin(10*x)};
+  \end{axis}
+\end{tikzpicture}
