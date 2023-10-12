@@ -14,6 +14,7 @@ arxiv_export: clean default
 	-arxiv_latex_cleaner --verbose --use_external_tikz figures/tikzexternal .
 	-mv ../${name}_arXiv arxiv_export
 	-mv .latexmk/*.bbl arxiv_export
+	-rm arxiv_export/Makefile
 
 clean:
 	-rm -rf .latexmk
