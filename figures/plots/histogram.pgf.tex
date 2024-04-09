@@ -1,0 +1,33 @@
+\begin{axis}[
+  width=\plotwidth,
+  height=\plotheight,
+  xlabel=$x$,
+  ylabel=count,
+  grid=major,
+  grid style={dashed, very thin},
+  xmin=6,
+  xmax=15,
+  domain=6:15,
+]
+
+  \addplot+[
+    ybar interval,
+    mark=none,
+    color=orange,
+    fill=orange,
+    fill opacity=0.2,
+  ] table [
+    col sep=comma,
+    x expr={\thisrow{bin_begin}/1000},y=count
+  ] {\csvfile};
+
+  \addplot[
+    samples=1000,
+    very thick,
+    color=blue!600!red,
+    fill=blue,
+    opacity=0.6,
+    fill opacity=0.2,
+  ] {300*exp(-((x-9.6)^2)/(2*0.4^2))};
+
+\end{axis}

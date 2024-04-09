@@ -1,0 +1,19 @@
+\begin{axis}[
+  width=\plotwidth,
+  height=\plotheight,
+  xlabel=$t$,
+  ylabel=$x$,
+  enlarge x limits=false,
+  xtick distance=500,
+  grid=major,
+  grid style={dashed},
+]
+
+  \addplot [
+    color=orange,
+  ] table [
+    col sep=comma,
+    x=t,y=value
+  ] {\csvfile};
+
+\end{axis}
