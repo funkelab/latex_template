@@ -1,0 +1,20 @@
+% typeset parts of equations as a tikz node
+\def\tikzmath#1#2{\tikz[remember picture,baseline=(#1.base),inner sep=0pt] \node (#1) {$\displaystyle #2$};}
+
+\newenvironment{panel}[2]{%
+  \begin{minipage}[t][][t]{#2}%
+    \strut#1%
+
+    \vspace{-\baselineskip}%
+}{%
+  \end{minipage}%
+}%
+\newenvironment{panelcolumn}[1]{%
+  \begin{minipage}[t][][t]{#1}%
+}{%
+  \end{minipage}%
+}%
+
+% lengths for setting the width of plots
+\newlength{\plotwidth}
+\newlength{\plotheight}
