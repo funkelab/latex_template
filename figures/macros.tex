@@ -18,3 +18,23 @@
 % lengths for setting the width of plots
 \newlength{\plotwidth}
 \newlength{\plotheight}
+
+% continued caption texts
+%
+% Usage:
+%\begin{figure}
+%  \input{figure sources}
+%  \caption{
+%    ...
+%    \captbc
+%  }
+%\end{figure}
+%\begin{figure}
+%  \contcaption{
+%    \capcont
+%    ...
+%  }
+%  \label{goes here}
+%\end{figure}
+\def\captbc{\emph{(caption continued on next page)}\xspace}
+\def\capcont{\emph{(continued)\ }}
